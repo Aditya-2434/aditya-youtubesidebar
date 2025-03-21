@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sidebar{
+            display: flex;
+            position: fixed;
+            top: 70px;
+            left: 0px;
+            bottom: 10px;
+            flex-direction: column;
+            width: 90px;
+            justify-content: space-between;
+            box-shadow: 5px 0px 3px rgba(0,0,1,0.2);
+        }
+        .side-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 110px;
+            cursor: pointer;
+            position: relative;
+        }
+        .side-item:hover{
+            background-color: rgb(227, 227, 227);
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            margin-bottom: -5px;
+        }
+        .names{
+            font-size: 14px;
+        }
+        .music{
+            font-size: 15px;
+            white-space: nowrap;
+        }
+        .tool-tip1,.tool-tip2{
+            position: absolute;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            right: -75px;
+            opacity: 0;
+            pointer-events: none;
+
+        }
+        .side-item:hover .tool-tip1{
+            opacity :1;
+        }
+        .side-item:active .tool-tip2{
+            opacity: 1;
+        }
+        @media (min-width:600px){
+            .side-item{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+            }
+            .sidebar{
+                width: 150px;
+                padding-bottom: 150px;
+
+            }
+            .names{
+                font-size: 17px;
+            }
+            .hello{
+                display:none ;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="side-item" >
+            <div>
+                <img src="https://supersimple.dev/exercises/youtube/icons/home.svg">
+            </div>
+            <div class="tool-tip1">
+                welcome home
+            </div>
+            <div class="tool-tip2">
+                why are you clicking bro
+            </div>
+            <div class="hello">
+                hello
+            </div>
+            <div class="names">
+                Home
+            </div>
+        </div>
+        <div class="side-item" >
+            <div>
+                <img src="https://supersimple.dev/exercises/youtube/icons/explore.svg">
+            </div >
+            <div class="names">
+                Explore
+            </div>
+        </div>
+        <div class="side-item" >
+            <div>
+                <img src="https://supersimple.dev/exercises/youtube/icons/subscriptions.svg">
+            </div>
+            <div class="names">
+                Subscription
+            </div>
+        </div>
+        <div class="side-item" >
+            <div>
+                <img src="	https://supersimple.dev/exercises/youtube/icons/originals.svg">
+            </div>
+            <div class="names">
+                Originals
+            </div>
+        </div>
+        <div class="side-item" >
+            <div>
+                <img src="https://supersimple.dev/exercises/youtube/icons/youtube-music.svg">
+            </div>
+            <div class="music">
+                Youtube Music
+            </div>
+        </div>
+        <div class="side-item" >
+            <div>
+                <img src="https://supersimple.dev/exercises/youtube/icons/library.svg">
+            </div>
+            <div class="names">
+                Library
+            </div>
+        </div>
+    </div>
+</body>
+</html>
